@@ -9,8 +9,6 @@ namespace Supermarket
     class Customer
     {
         static private int _counter = 0;
-        public readonly int Id;
-        public readonly string FirstName, LastName;
 
         public Customer (string firstName, string lastName)
         {
@@ -19,5 +17,10 @@ namespace Supermarket
             FirstName = firstName;
             LastName = lastName;
         }
+
+        public int Id { get; init; }
+        public string FirstName { get; }
+        public string LastName { get; }
+
     }
 }
