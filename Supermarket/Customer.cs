@@ -18,7 +18,7 @@ namespace Supermarket
             LastName = lastName;
         }
 
-        public int Id { get; init; }
+        public int Id { get; }
         public string FirstName { get; }
         public string LastName { get; }
 
