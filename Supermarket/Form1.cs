@@ -12,10 +12,32 @@ namespace Supermarket
 {
     public partial class Form1 : Form
     {
+        private Supermarket sm;
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void BtnSupermarket(object sender, EventArgs e)
+        {
+            sm = new Supermarket(txtChain.Text, txtLocation.Text);
+            btnSupermarket.ToggleEnabled();
+            txtChain.ToggleEnabled();
+            txtLocation.ToggleEnabled();
+            btnAddCustomer.ToggleEnabled();
+            txtName.ToggleEnabled();
+            txtSurname.ToggleEnabled();
+        }
+
+        private void BtnAddCustomer(object sender, EventArgs e)
+        {
+            if (txtName.Text.Length > 0 && txtSurname.Text.Length > 0)
+            {
+                sm.AddCustomer(new Customer(txtName.Text, txtSurname.Text));
+                dgvCustomers.DataSource = sm.CustomerList.ToArray();
+                txtName.Clear();
+                txtSurname.Clear();
+            }
+        }
     }
 }

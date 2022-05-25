@@ -18,7 +18,7 @@ namespace Supermarket
             Location = location;
             _customerList = new List<Customer>();
         }
-        public void InsertCustomer(Customer customer)
+        public void AddCustomer(Customer customer)
         {
             _customerList.Add(customer);
         }
