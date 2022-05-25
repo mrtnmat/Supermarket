@@ -35,13 +35,15 @@ namespace Supermarket
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtChain = new System.Windows.Forms.TextBox();
             this.txtLocation = new System.Windows.Forms.TextBox();
+            this.lblChain = new System.Windows.Forms.Label();
+            this.lblLocation = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -71,7 +73,7 @@ namespace Supermarket
             // dgvCustomers
             // 
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Location = new System.Drawing.Point(310, 51);
+            this.dgvCustomers.Location = new System.Drawing.Point(344, 135);
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.RowTemplate.Height = 25;
             this.dgvCustomers.Size = new System.Drawing.Size(500, 210);
@@ -107,15 +109,6 @@ namespace Supermarket
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 15);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Name";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -124,6 +117,15 @@ namespace Supermarket
             this.label2.Size = new System.Drawing.Size(54, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "Surname";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 111);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 15);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Name";
             // 
             // groupBox2
             // 
@@ -171,11 +173,29 @@ namespace Supermarket
             this.txtLocation.Size = new System.Drawing.Size(169, 23);
             this.txtLocation.TabIndex = 8;
             // 
+            // lblChain
+            // 
+            this.lblChain.AutoSize = true;
+            this.lblChain.Location = new System.Drawing.Point(396, 51);
+            this.lblChain.Name = "lblChain";
+            this.lblChain.Size = new System.Drawing.Size(0, 15);
+            this.lblChain.TabIndex = 7;
+            // 
+            // lblLocation
+            // 
+            this.lblLocation.AutoSize = true;
+            this.lblLocation.Location = new System.Drawing.Point(608, 51);
+            this.lblLocation.Name = "lblLocation";
+            this.lblLocation.Size = new System.Drawing.Size(0, 15);
+            this.lblLocation.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 383);
+            this.Controls.Add(this.lblLocation);
+            this.Controls.Add(this.lblChain);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvCustomers);
@@ -187,6 +207,7 @@ namespace Supermarket
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -206,6 +227,8 @@ namespace Supermarket
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtChain;
         private System.Windows.Forms.TextBox txtLocation;
+        private System.Windows.Forms.Label lblChain;
+        private System.Windows.Forms.Label lblLocation;
     }
 }
 

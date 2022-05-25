@@ -21,6 +21,9 @@ namespace Supermarket
         private void BtnSupermarket(object sender, EventArgs e)
         {
             sm = new Supermarket(txtChain.Text, txtLocation.Text);
+            lblChain.Text = $"Chain: {txtChain.Text}";
+            lblLocation.Text = $"Location: {txtLocation.Text}";
+
             btnSupermarket.ToggleEnabled();
             txtChain.ToggleEnabled();
             txtLocation.ToggleEnabled();
